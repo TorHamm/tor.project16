@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+$orange: hsl(25, 97%, 53%);
+$white: hsl(0, 0%, 100%);
+$grey: hsl(217, 12%, 63%);
+$dark-blue: hsl(213, 19%, 18%);
+$very-dark-blue: hsl(216, 12%, 8%);
+
+* {
+    transition: .2s;
+    font-family: "Overpass", sans-serif;
+    color: $white;
+}
+
+html , body {
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $very-dark-blue;
+}
+
+button {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: $grey;
+}
+
+.card {
+    padding: 24px;
+    border-radius: 15px;
+    background: linear-gradient(#232A34, #181E27);
+    .ratingCard{
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        padding-bottom: 3px;
+        width: 279px;
+        .text {
+            display: flex;
+            flex-direction: column;
+            row-gap: 16px;
+            .icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 40px;
+                border-radius: 20px;
+                background-color: $dark-blue;
+                box-shadow: 0 0 10px 0 (hsl(216, 12%, 8%,.2));
+                img {
+                    width: 14px;
+                }
+            }
+        }
+        .rating {
+            display: flex;
+            column-gap: 18px;
+            button {
+                width: 42px;
+                height: 42px;
+                color: $grey;
+                border: none;
+                border-radius: 21px;
+                background-color: $dark-blue;
+            }
+            .active {
+                color: $very-dark-blue;
+                background-color: $orange;
+            }
+        }
+        #submitButton {
+            pointer-events: none;
+            height: 45px;
+            color: $very-dark-blue;
+            border: none;
+            border-radius: 22.5px;
+            background-color: $orange;
+            &:hover {
+                color: $very-dark-blue;
+                background-color: white;
+            }
+        }
+    }
+
+    .thankYouCard {
+        padding-top: 10px;
+        padding-bottom: 12px;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        row-gap: 24px;
+        width: 279px;
+        img {
+            height: 96px;
+        }
+        .ratingText {
+            padding: 5px 12px;
+            color: $orange;
+            border-radius: 22.5px;
+            background-color: $dark-blue;
+        }
+        .text {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+    }
+
+    .hidden {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@media only screen and (min-width : 481px) {
+    h1 {
+        font-size: 28px;
+    }
+    p {
+        font-size: 15px;
+        line-height: 24px;
+    }
+    .card {
+        width: 412px;
+        height: 416px;
+        padding: 32px;
+        border-radius: 30px;
+        .ratingCard {
+            width: 341px;
+            .text {
+                row-gap: 15px;
+                .icon {
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 24px;
+                    margin-bottom: 15px;
+                    img {
+                        width: auto;
+                    }
+                }
+            }
+            .rating {
+                column-gap: 21px;
+                button {
+                    width: 51px;
+                    height: 51px;
+                    border-radius: 25.5px;
+                }
+            }
+            #submitButton {
+                margin-top: 8px;
+            }
+        }
+        .thankYouCard {
+            width: 340px;
+            padding: 13px 0;
+            img {
+                width: 162px;
+                height: 108px;
+            }
+            .ratingText {
+                padding: 4px 20px;
+            }
+            
+        }
+    }
+}

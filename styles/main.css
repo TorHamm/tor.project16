@@ -1,0 +1,232 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+* {
+  transition: 0.2s;
+  font-family: "Overpass", sans-serif;
+  color: hsl(0, 0%, 100%);
+}
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(216, 12%, 8%);
+}
+
+button {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: hsl(217, 12%, 63%);
+}
+
+.card {
+  padding: 24px;
+  border-radius: 15px;
+  background: linear-gradient(#232A34, #181E27);
+}
+.card .ratingCard {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  padding-bottom: 3px;
+  width: 279px;
+}
+.card .ratingCard .text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.card .ratingCard .text .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: hsl(213, 19%, 18%);
+  box-shadow: 0 0 10px 0 hsla(216, 12%, 8%, 0.2);
+}
+.card .ratingCard .text .icon img {
+  width: 14px;
+}
+.card .ratingCard .rating {
+  display: flex;
+  -moz-column-gap: 18px;
+       column-gap: 18px;
+}
+.card .ratingCard .rating button {
+  width: 42px;
+  height: 42px;
+  color: hsl(217, 12%, 63%);
+  border: none;
+  border-radius: 21px;
+  background-color: hsl(213, 19%, 18%);
+}
+.card .ratingCard .rating .active {
+  color: hsl(216, 12%, 8%);
+  background-color: hsl(25, 97%, 53%);
+}
+.card .ratingCard #submitButton {
+  pointer-events: none;
+  height: 45px;
+  color: hsl(216, 12%, 8%);
+  border: none;
+  border-radius: 22.5px;
+  background-color: hsl(25, 97%, 53%);
+}
+.card .ratingCard #submitButton:hover {
+  color: hsl(216, 12%, 8%);
+  background-color: white;
+}
+.card .thankYouCard {
+  padding-top: 10px;
+  padding-bottom: 12px;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap: 24px;
+  width: 279px;
+}
+.card .thankYouCard img {
+  height: 96px;
+}
+.card .thankYouCard .ratingText {
+  padding: 5px 12px;
+  color: hsl(25, 97%, 53%);
+  border-radius: 22.5px;
+  background-color: hsl(213, 19%, 18%);
+}
+.card .thankYouCard .text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.card .hidden {
+  opacity: 0;
+  display: none;
+}
+
+@media only screen and (min-width: 481px) {
+  h1 {
+    font-size: 28px;
+  }
+  p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .card {
+    width: 412px;
+    height: 416px;
+    padding: 32px;
+    border-radius: 30px;
+  }
+  .card .ratingCard {
+    width: 341px;
+  }
+  .card .ratingCard .text {
+    row-gap: 15px;
+  }
+  .card .ratingCard .text .icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    margin-bottom: 15px;
+  }
+  .card .ratingCard .text .icon img {
+    width: auto;
+  }
+  .card .ratingCard .rating {
+    -moz-column-gap: 21px;
+         column-gap: 21px;
+  }
+  .card .ratingCard .rating button {
+    width: 51px;
+    height: 51px;
+    border-radius: 25.5px;
+  }
+  .card .ratingCard #submitButton {
+    margin-top: 8px;
+  }
+  .card .thankYouCard {
+    width: 340px;
+    padding: 13px 0;
+  }
+  .card .thankYouCard img {
+    width: 162px;
+    height: 108px;
+  }
+  .card .thankYouCard .ratingText {
+    padding: 4px 20px;
+  }
+}/*# sourceMappingURL=main.css.map */
