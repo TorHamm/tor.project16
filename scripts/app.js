@@ -20,8 +20,10 @@ button.forEach(selectedBtn => {
     selectedBtn.addEventListener('click' , () => {
         button.forEach(unSelectedBtn => {
             unSelectedBtn.classList.remove('active');
+            selectedBtn.setAttribute('aria-pressed' , 'falsse')
         })
         selectedBtn.classList.add('active');
+        selectedBtn.setAttribute('aria-pressed' , 'true')
         submitButton.style.pointerEvents = "auto";
     });
 });
